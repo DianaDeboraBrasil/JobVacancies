@@ -1,0 +1,34 @@
+<div fxLayout="column" fxFlex>
+    <div class="register mat-elevation-z2">
+    <div class="title"> <span>Vacancy Registration</span></div>
+    <form name="form" [formGroup]="form">
+      <div fxLayout="row" fxLayoutAlign="start center">
+          <mat-form-field>
+          <input matInput type="text" id="nameVacancy" maxlength="50" [(ngModel)]='vacancy.name' placeholder=""
+            formControlName="Name" placeholder="Title" />
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="text" id="descriptionVacancy" maxlength="50" [(ngModel)]='vacancy.description'
+            placeholder="Vacancy Description" formControlName="Description" />
+        </mat-form-field>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="start center">
+        <mat-form-field>
+          <mat-select id="IdCompany" [(ngModel)]='vacancy.companyId' placeholder="Company" formControlName="Company">
+            <mat-option *ngFor='let item of companies' [value]="item.id">{{item.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </form>
+    <div fxLayout="row" fxLayoutAlign="end center">
+      <button class="registerButton" mat-raised-button [disabled]="!form.valid"
+        (click)='vacancyRegistration()'>Register</button>
+      <button mat-raised-button class="cancelButton" (click)="clean()">Clean</button>
+    </div>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="end center" style="padding: 1em">
+    <button class="cancelButton" mat-raised-button (click)="back()">
+      Back
+    </button>
+  </div>
+</div>

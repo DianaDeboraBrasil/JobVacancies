@@ -1,0 +1,22 @@
+<div fxLayout="column" fxFlex>
+  <div class="grid-container">
+    <mat-grid-list [cols]="breakpoint" rowHeight="205px" (window:resize)="onResize()">
+      <mat-grid-tile *ngFor="let vacancy of listVacancy; let i = index" colspan=1 rowspan=1 fxLayout="column"
+        fxFlex="100" fxFlex.gt-md="25" fxFlex.gt-sm="50">
+        <mat-card class="dashboard-card">
+          <mat-card-content class="dashboard-card-content">
+            <div class="centered">
+              <button mat-raised-button (click)="detailClick(vacancy)" id="{{ 'botao' + i }}">
+                {{vacancy.name}}
+                <div>
+                {{vacancy.description}}
+                </div>
+              </button>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>
+

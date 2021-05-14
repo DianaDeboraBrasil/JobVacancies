@@ -1,0 +1,82 @@
+
+td.mat-cell:last-of-type{
+  padding-right: 0px;
+}
+
+.btn-create {
+  position: absolute !important;
+  right: 20px;
+  background: #990011;
+  top: 0;
+  margin: 2em;
+}
+
+.uploader-status::ng-deep .mat-progress-spinner circle,
+.mat-spinner circle {
+  stroke: #630a0c;
+}
+
+.uploader-status {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+.title {
+  padding-bottom: 25px;
+  padding-left: 8px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.register {
+  background-color: #ffffff;
+  padding: 1em;
+}
+
+
+.registerButton {
+  font-size: 14px;
+  background-color: #630a0c;
+  color: #fff;
+  margin-right: 0.5em;
+  width: 8em;
+}
+
+.cancelButton {
+  box-shadow: none;
+  background-color: transparent;
+  color: #630a0c;
+  border: 1px solid #630a0c;
+  width: 8em;
+}
+
+.mt {
+  margin-top: 3em;
+}
+
+legend {
+  width: auto !important;
+}
+
+.mat-cell {
+  font-size: 12px;
+}
+
+.btn-default {
+  background-color: #630a0c;
+  color: #fff;
+  text-transform: uppercase;
+  box-shadow: 0 3px 1px -2px rgba (0, 0, 0, 0.2),
+     0 2px 2px 0 rgba (0, 0, 0, 0.14),  0 1px 5px 0 rgba (0, 0, 0, 0.12);
+  width: 20em;
+  border: none;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  height: 2.2em;
+  border-radius: 0.3em;
+}
+
+

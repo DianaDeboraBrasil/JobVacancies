@@ -1,0 +1,22 @@
+mat-toolbar-row {
+  background-color: #630a0c;
+  width: auto !important;
+}
+.content {
+  padding: 2em;
+}
+
+.whitecolor {
+  color: #fff;
+}
+
+.blackcolor {
+  color: #000;
+}
+
+@media (max-width: 575px) {
+  mat-toolbar-row {
+    position: absolute;
+    z-index: 100;
+  }
+}

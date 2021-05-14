@@ -1,0 +1,12 @@
+<mat-toolbar class="whitecolor" style="margin-bottom: 1em;">
+  <mat-toolbar-row>
+    <a mat-button [routerLink]="'/app-vacancies-dashboard'" routerLinkActive="blackcolor">
+      <h1>Job Vacancies</h1>
+    </a>
+    <div>
+      <a mat-button [routerLink]="'/app-company'" routerLinkActive="blackcolor">Company Registration</a>
+      <a mat-button [routerLink]="'/app-vacancies'" routerLinkActive="blackcolor">Vacancy Registration</a>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+<app-content class="content"></app-content>

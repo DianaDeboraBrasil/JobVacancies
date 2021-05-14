@@ -1,0 +1,52 @@
+
+
+.grid-container {
+  display: block;
+  position: relative;
+  margin: -2.5em 0em 0em 0em;
+}
+
+@media (max-width: 2560px) {
+  .grid-container {
+    max-width: 2000px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .grid-container {
+    max-width: 1140px !important;
+  }
+}
+
+.dashboard-card {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  // opacity: 0.75;
+}
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+.dashboard-card-content {
+  text-align: center;
+  width: 100%;
+}
+
+div.centered button {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+
+

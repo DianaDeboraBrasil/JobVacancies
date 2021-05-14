@@ -1,0 +1,37 @@
+<div fxLayout="column" fxFlex>
+  <div fxFlexAlign="center" class="uploader-status" style="z-index: 1000; position: relative; ">
+    <mat-spinner [diameter]="50" mode="indeterminate" *ngIf="spinnerService.visibility | async">
+    </mat-spinner>
+  </div>
+  <div class="register mat-elevation-z2">
+    <div class="title"> <span>Company Registration</span></div>
+    <form name="form" [formGroup]="form">
+      <div fxLayout="row" fxLayout.xs="column">
+        <mat-form-field>
+          <input matInput type="text" id="name" maxlength="50" [(ngModel)]='company.name' placeholder="Company Name"
+            formControlName="Name" />
+        </mat-form-field>
+      </div>
+    </form>
+    <div fxLayout="row" fxLayoutAlign="end center">
+      <button class="registerButton" mat-raised-button [disabled]="!form.valid"
+        (click)='registerCompany()'>Register</button>
+      <button mat-raised-button class="cancelButton" (click)="clean()">Clean</button>
+    </div>
+  </div>
+  <div class="mat-elevation-z2" [hidden]="!companies.length">
+    <table mat-table [dataSource]='companies'>
+      <ng-container matColumnDef="name">
+        <th class="w-8-p text-center" mat-header-cell *matHeaderCellDef>Companies</th>
+        <td class="w-8-p text-center" mat-cell *matCellDef="let element"> {{element.name}}</td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="end center" style="padding: 1em">
+    <button class="cancelButton" mat-raised-button (click)="back()">
+      Back
+    </button>
+  </div>
+</div>
