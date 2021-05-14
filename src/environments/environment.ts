@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   hmr: false,
-  JobVacanciesApiHost: 'https://localhost:5001/api/' // Ambiente de desenvolvimento local
+  JobVacanciesApiHost: 'https://jobvacancies-api.herokuapp.com/api/' //ambiente de homologação
+  //JobVacanciesApiHost: 'https://localhost:5001/api/' // Ambiente de desenvolvimento local
 };
 
 /*
